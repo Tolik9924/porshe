@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-    InfoContainer, MoreInfo,
+    InfoContainer, 
+    MoreInfo,
 } from './styled';
 
 export const Main = () => {

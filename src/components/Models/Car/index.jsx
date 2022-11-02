@@ -10,13 +10,18 @@ import {
     Image 
 } from './styled';
 
-const Car = () => {
+const Car = ({
+    id,
+    name,
+    energy,
+}) => {
+
     return(
         <Container>
             <Image src={model} />
-            <Name>Porsche</Name>
-            <Resource>Electro</Resource>
-            <Config>Configurate</Config>
+            <Name>{name}</Name>
+            <Resource>{energy}</Resource>
+            <Config to={`/models/${id}`} >Configurate</Config>
         </Container>
     );
 };

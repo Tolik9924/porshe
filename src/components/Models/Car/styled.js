@@ -10,6 +10,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
 `;
 
 export const Image = styled.img`
