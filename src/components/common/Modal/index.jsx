@@ -7,11 +7,13 @@ const Modal = ({
     setActive,
     children,
 }) => {
-    <Container active={active} onClick={() => setActive(false)}>
-        <Content active={active} onClick={e => e.stopPropagation()}>
-            {children}
-        </Content>
-    </Container>
+    return (
+        <Container active={active} onClick={() => setActive(false)}>
+            <Content active={active} onClick={e => e.stopPropagation()}>
+                {children}
+            </Content>
+        </Container>
+    );
 };
 
 export default Modal;

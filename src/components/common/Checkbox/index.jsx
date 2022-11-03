@@ -2,15 +2,16 @@ import React from 'react';
 
 // Styles
 import {
-    Container,
-    CheckboxContainer,
-    Icon,
-    HiddenCheckbox,
-    StyledCheckbox,
-    Text,
-  } from './styled';
-  
-  const Checkbox = ({ checked, onChange }) => (
+  Container,
+  CheckboxContainer,
+  Icon,
+  HiddenCheckbox,
+  StyledCheckbox,
+  Text,
+} from './styled';
+
+const Checkbox = ({ checked, onChange }) => {
+  return (
     <Container>
       <CheckboxContainer>
         <HiddenCheckbox checked={checked} onChange={onChange} />
@@ -23,5 +24,6 @@ import {
       {/* <Text>Не показувати всі оголошення на сторінці мого оголошення</Text> */}
     </Container>
   );
+}
 
 export default Checkbox;

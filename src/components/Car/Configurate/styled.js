@@ -25,6 +25,7 @@ export const ChangeConfig = styled.div`
     margin-left: 120px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 `;
 
 export const ConfigHeader = styled.header`
@@ -33,10 +34,19 @@ export const ConfigHeader = styled.header`
     color: #1a1a1a;
 `;
 
-export const Colors = styled.div`
+export const NameCarContainer = styled.div`
+    font-size: 30px;
+    color: #707275;
+    border-bottom: 0.5px solid #d8d9da;
+`;
+
+export const NameCar = styled.p``;
+
+export const ItemsConfig = styled.div`
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
+    margin-top: 50px;
+    justify-content: space-between;
 `;
 
 export const Color = styled.div`
@@ -49,4 +59,21 @@ export const Color = styled.div`
     justify-content: end;
     border-radius: 5px;
     border: 0.5px solid #bec0c1;
+`;
+
+export const Wheel = styled.div`
+    background-image: url(${props => props.image});
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+`;
+
+export const PriceContainer = styled.div`
+    margin-top: 50px;
+    border-top: 0.5px solid #d8d9da;
+    font-size: 35px;
+    color: #21232c;
 `;

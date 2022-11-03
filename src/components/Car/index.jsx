@@ -23,6 +23,8 @@ const Car = () => {
                 colors={result[0].colors}
                 name={result[0].name}
                 energy={result[0].energy}
+                price={result[0].price}
+                wheels={result[0].wheels}
             />
         </div>
     );
