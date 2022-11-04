@@ -1,6 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import ModalHeader from './ModalHeader';
+
+// conponents
 import RightNav from './RightNav';
+
+// assets
+import logo from '../../../assets/images/logo.png';
+
+// styles
 import {
     ContainerHeader,
     Container,
@@ -9,14 +16,24 @@ import {
 } from './styled';
 
 const Header = () => {
+
+    const [active, setActive] = useState(false);
+
     return (
         <ContainerHeader>
             <Container>
                 <Logo>
-                    <NavLink to="/">Logo</NavLink>
+                    <NavLink to="/">logo</NavLink>
                 </Logo>
-                <RightNav />
+                <RightNav 
+                    active={active} 
+                    setActive={setActive} 
+                />
             </Container>
+            <ModalHeader 
+                active={active}
+                setActive={setActive}  
+            />
         </ContainerHeader>
     );
 };

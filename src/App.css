@@ -10,3 +10,7 @@ html, body {
 .wrap {
   min-height: calc(100vh - 70px);
 }
+
+li {
+  list-style: none;
+}

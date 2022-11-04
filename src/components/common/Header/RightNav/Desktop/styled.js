@@ -11,7 +11,7 @@ export const Lists = styled.ul`
     gap: 20px;
     list-style-type: none;
     @media screen and (max-width: 864px) {
-    display: none;
+      display: none;
     }
 `;
 

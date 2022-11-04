@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import Info from './Info';
+import Info from '../Info';
 import Configurate from './Configurate';
 import { useParams } from 'react-router-dom';
 import { cars } from '../../data/data';
@@ -18,7 +18,6 @@ const Car = () => {
 
     return (
         <div>
-            <Info />
             <Configurate 
                 colors={result[0].colors}
                 name={result[0].name}
