@@ -1,14 +1,21 @@
 import React from 'react';
+import Slider from "react-slick";
 
 // components
-import Info from '../Info';
 import Configurate from './Configurate';
 import { useParams } from 'react-router-dom';
 import { cars } from '../../data/data';
 
+// assets
+import form from '../../assets/images/form.webp';
+
+// styles
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 const Car = () => {
 
-    const {id } = useParams();
+    const { id } = useParams();
 
     const configureData = JSON.parse(JSON.stringify(cars));
 
@@ -18,7 +25,7 @@ const Car = () => {
 
     return (
         <div>
-            <Configurate 
+            <Configurate
                 colors={result[0].colors}
                 name={result[0].name}
                 energy={result[0].energy}

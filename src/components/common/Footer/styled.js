@@ -19,17 +19,27 @@ export const Common = styled.div`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+    @media (max-width: 1000px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `;
 
 export const Header = styled.header`
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
     color: #191a1a;
+    @media (max-width: 1000px) {
+        font-size: 40px;
+    }
 `;
 
 export const Info = styled.span`
     margin-top: 5px;
     margin-bottom: 5px;
     color: #4b4d4e;
+    @media (max-width: 1000px) {
+        font-size: 15px;
+    }
 `;

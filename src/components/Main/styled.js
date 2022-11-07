@@ -39,6 +39,13 @@ export const MoreInfo = styled.button`
     }
 `;
 
+export const ModelsRow = styled.div`
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
 export const ModelHeader = styled.header`
     display: flex;
     justify-content: center;
@@ -46,11 +53,10 @@ export const ModelHeader = styled.header`
 `;
 
 export const Models = styled.div`
-    margin-top: 15px;
-    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin: 15px auto;
+    max-width: 1800px;
     @media (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
@@ -65,12 +71,18 @@ export const Model = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    @media (max-width: 1000px) {
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+`;
+
+export const ModelContaier = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (max-width: 1000px) {
-        margin-bottom: 20px;
-    }
+    background: rgba(0,0,0,0.4);
+    height: 400px;
 `;
 
 export const InfoCar = styled.div`

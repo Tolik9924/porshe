@@ -11,8 +11,9 @@ export const Container = styled.div`
     margin-bottom: 20px;
     border-radius: 10px;
     box-sizing: border-box;
-    @media (max-width: 864px) {
+    @media (max-width: 1000px) {
         width: 100%;
+        border-radius: 0;
     }
     display: flex;
     flex-direction: column;

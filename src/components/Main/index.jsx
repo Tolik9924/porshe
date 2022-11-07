@@ -12,9 +12,11 @@ import {
     InfoContainer,
     MoreInfoContainer,
     MoreInfo,
+    ModelsRow,
     ModelHeader,
     Models,
     Model,
+    ModelContaier,
     InfoCar,
     NameModel,
     Price,
@@ -45,13 +47,15 @@ export const Main = () => {
                         cars.map((car) => {
                             return (
                                 <Model key={car.id}>
-                                    <InfoCar>
-                                        <NameModel>{car.name}</NameModel>
-                                        <Price>Орієнтована вартість від {car.price}</Price>
-                                    </InfoCar>
-                                    <ConfigContainer>
-                                        <Config onClick={() => handleClick(car.id)}>config</Config>
-                                    </ConfigContainer>
+                                    <ModelContaier>
+                                        <InfoCar>
+                                            <NameModel>{car.name}</NameModel>
+                                            <Price>Орієнтована вартість від {car.price}</Price>
+                                        </InfoCar>
+                                        <ConfigContainer>
+                                            <Config onClick={() => handleClick(car.id)}>config</Config>
+                                        </ConfigContainer>
+                                    </ModelContaier>
                                 </Model>
                             );
                         })

@@ -12,6 +12,9 @@ export const Container = styled.div`
     border-radius: 15px;
     margin-right: 30px;
     margin-left: 30px;
+    @media (max-width: 1000px) {
+        margin-top: 30px;
+    }
 `;
 
 export const Image = styled.img`
