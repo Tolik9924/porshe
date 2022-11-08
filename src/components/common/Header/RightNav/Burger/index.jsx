@@ -11,7 +11,7 @@ const Burger = ({active, setActive}) => {
 
     return(
         <BurgerButton onClick={changeHandler}>
-            <BurgerIcons width="40px" height="40px" />
+            <BurgerIcons width="40px" height="40px" fill='#000'/>
         </BurgerButton>
     );
 };

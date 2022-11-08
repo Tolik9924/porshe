@@ -5,6 +5,7 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 `;
 
 export const CloseMenuContainer = styled.div`
@@ -38,6 +39,7 @@ export const ItemContainer = styled.li`
     padding: 10px 10px;
     box-sizing: border-box;
     font-size: 25px;
+    color: #fff;
 `;
 
 export const NavLink = styled(Link)`

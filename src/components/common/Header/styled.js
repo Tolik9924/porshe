@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export const ContainerHeader = styled.header`
     width: calc(100% - 40px);
     padding: 0 20px;
-    background: #34568b;
-    color: #fff;
+    background: #fff;
+    color: #000;
 `;
 
 export const Container = styled.div`
@@ -17,6 +17,11 @@ export const Container = styled.div`
     margin: 0 auto;
     align-items: center;
     font-size: 20px;
+`;
+
+export const RightSide = styled.div`
+    display: flex;
+    flex-direction: row;
 `;
 
 export const Logo = styled.div``;

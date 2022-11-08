@@ -57,7 +57,7 @@ export const Models = styled.div`
     flex-direction: row;
     margin: 15px auto;
     max-width: 1800px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         flex-direction: column;
         align-items: center;
     }
@@ -71,9 +71,14 @@ export const Model = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+
+    @media (min-width: 1000px) and (max-width: 1200px) {
+        margin-bottom: 10px;
+      }
+
     @media (max-width: 1000px) {
         margin-bottom: 20px;
-        max-width: 300px;
+        width: 100%;
     }
 `;
 

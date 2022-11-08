@@ -6,7 +6,7 @@ import RightNav from './RightNav';
 import ModalHeader from './ModalHeader';
 
 // assets
-import logo from '../../../assets/images/logoPorsche.png';
+import logo from '../../../assets/images/logo-svg.svg';
 
 // styles
 import {

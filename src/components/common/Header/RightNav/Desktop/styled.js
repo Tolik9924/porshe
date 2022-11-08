@@ -21,5 +21,5 @@ export const Item = styled.li`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-  color: #fff;
+  color: #000;
 `;

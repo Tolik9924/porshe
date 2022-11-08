@@ -22,9 +22,10 @@ export const Container = styled.div`
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: row;
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         flex-direction: column;
         margin-bottom: 40px;
+        align-items: center;
     }
 `;
 
@@ -33,20 +34,25 @@ export const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         width: 100%;
     }
 `;
 
 export const ImageContainer = styled.div`
     width: 1000px;
-    height: 500px;
+    min-height: 500px;
     background-image: url(${carHeader});
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     border-radius: 10px 0 0 10px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         width: 100%;
+        height: 10%;
         border-radius: 0px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
     }
 `;
 

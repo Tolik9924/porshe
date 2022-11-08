@@ -21,5 +21,5 @@ export const Content = styled.div`
   transform: scale(1);
   transition: 0.4s transform;
   backdrop-filter: blur(2px);
-  background-color: rgba(52, 86, 139, 0.6);
+  /* background-color: rgba(52, 86, 139, 0.6); */
 `;

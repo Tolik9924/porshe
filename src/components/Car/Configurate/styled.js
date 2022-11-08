@@ -36,13 +36,65 @@ export const ImageContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
-    width: 800px;
-    z-index: 2;
+    width: 1000px;
+    z-index: 0;
+
+    .ft-slick__dots--custom {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+      }
+
+    .slick-list {
+        overflow: ${props => (props.overflow ? "visible" : "hidden")};
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 50px;
+    
+        display: block;
+    
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    
+        list-style: none;
+    
+        text-align: center;
+      }
+
+      .slick-dots li {
+        width: 14px;
+        margin: 0 2px;
+        transition: width 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .slick-dots .slick-active .ft-slick__dots--custom {
+        background: #c7381f;
+      }
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1600px) {
+        margin: 0 auto;
+      }
 `;
 
 export const SlickSlide = styled.div`
     img {
+        width: 1000px;
+        height: 600px;
         margin: auto;
+        @media (max-width: 1200px) {
+            width: 100%;
+            height: 30%;
+        }
     } 
 `;
 
@@ -59,6 +111,9 @@ export const ConfigHeader = styled.header`
     font-size: 45px;
     font-weight: 600;
     color: #1a1a1a;
+    @media (max-width: 1800px) {
+        margin-left: 50px;
+    }
 `;
 
 export const NameCarContainer = styled.div`
@@ -67,13 +122,20 @@ export const NameCarContainer = styled.div`
     border-bottom: 0.5px solid #d8d9da;
 `;
 
-export const NameCar = styled.p``;
+export const NameCar = styled.p`
+    @media (max-width: 1800px) {
+        margin-left: 50px;
+    }
+`;
 
 export const ItemsConfig = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 50px;
     justify-content: space-between;
+    @media (max-width: 1800px) {
+        margin-left: 50px;
+    }
 `;
 
 export const ItemPrice = styled.div`
@@ -81,6 +143,9 @@ export const ItemPrice = styled.div`
     font-size: 20px;
     font-weight: 600;
     margin-top: 20px;
+    @media (max-width: 1800px) {
+        margin-left: 50px;
+    }
 `;
 
 export const Color = styled.div`
@@ -112,25 +177,28 @@ export const PriceContainer = styled.div`
     color: #21232c;
 `;
 
+export const Price = styled.p`
+    @media (max-width: 1800px) {
+        margin-left: 50px;
+    }
+`;
+
 export const ArrowRightContainer = styled.div`
     position: absolute;
-    top: 280px;
-    left: 738px;
+    top: 50%;
+    left: 935px;
     z-index: 1;
     &::before {
         content: '';
     }
-    /* &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 5px;
-    } */
+    @media (max-width: 1200px) {
+        left: 85%;
+    }
 `;
 
 export const ArrowLeftContainer = styled.div`
     position: absolute;
-    top: 280px;
+    top: 50%;
     z-index: 1;
     left: 1px;
     &::before {
