@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-export const Nav = styled.nav`
-`;
+export const Nav = styled.nav``;
 
 export const Lists = styled.ul`
     display: flex;

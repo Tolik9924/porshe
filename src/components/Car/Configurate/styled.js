@@ -171,10 +171,32 @@ export const Wheel = styled.div`
 `;
 
 export const PriceContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
     margin-top: 50px;
     border-top: 0.5px solid #d8d9da;
     font-size: 35px;
     color: #21232c;
+`;
+
+export const DefaultConfigurateContainer = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const DefaultConfigurate = styled.button`
+    height: 35px;
+    font-size: 15px;
+    border: 0.5px solid #bec0c1;
+    color: #3e4041;
+    background: none;
+    cursor: pointer;
+    transition: .3s all;
+    &:hover {
+        color: #fff;
+        background: #c7381f;
+        transition: .3s all;
+    }
 `;
 
 export const Price = styled.p`

@@ -5,10 +5,12 @@ import Slider from "react-slick";
 import Checkbox from '../../common/Checkbox';
 
 // hooks
-import useGetPrice from '../../../hooks/useGetPrice';
+import useGetDefaultConfig from '../../../hooks/useGetDefaultConfig';
+import useGetColor from '../../../hooks/useGetColor';
 
 // assets
-import form from '../../../assets/images/form.webp';
+import ArrowRight from '../../../assets/icons/ArrowRight';
+import ArrowLeft from '../../../assets/icons/ArrowLeft';
 
 // styles
 import 'slick-carousel/slick/slick.css'
@@ -29,14 +31,13 @@ import {
     NameCar,
     PriceContainer,
     Price,
+    DefaultConfigurateContainer,
+    DefaultConfigurate,
     Wheel,
     ArrowRightContainer,
     ArrowLeftContainer,
 } from './styled';
 import Button from '../../common/Button';
-import ArrowRight from '../../../assets/icons/ArrowRight';
-import ArrowLeft from '../../../assets/icons/ArrowLeft';
-import useGetColor from '../../../hooks/useGetColor';
 
 const Arrow = ({ type, onClick }) => {
     let className = type === "next" ? "nextArrow" : "prevArrow";
@@ -55,8 +56,8 @@ const Configurate = ({
     price,
     wheels,
 }) => {
-    const defaultColorPrice = useGetPrice(colors);
-    const defaultWheelPrice = useGetPrice(wheels);
+    const defaultColor = useGetDefaultConfig(colors);
+    const defaultWheel = useGetDefaultConfig(wheels);
     const defaultColorCar = useGetColor(colors);
     const [colorPrice, setColorPrice] = useState(0);
     const [wheelPrice, setWheelPrice] = useState(0);
@@ -69,12 +70,12 @@ const Configurate = ({
     }, [defaultColorCar]);
 
     useEffect(() => {
-        setColorPrice(defaultColorPrice);
-    }, [defaultColorPrice]);
+        setColorPrice(defaultColor.price);
+    }, [defaultColor]);
 
     useEffect(() => {
-        setWheelPrice(defaultWheelPrice);
-    }, [defaultWheelPrice]);
+        setWheelPrice(defaultWheel.price);
+    }, [defaultWheel]);
 
     const handleChange = (name, arr, setState) => {
         for (let i = 0; i < arr.length; i++) {
@@ -89,6 +90,11 @@ const Configurate = ({
             }
         }
     };
+
+    const handleDefaultConfigurate = () => {
+        handleChange(defaultColor.name, colors, setColorPrice);
+        handleChange(defaultWheel.name, wheels, setWheelPrice);
+    } 
 
     const settings = {
         dots: true,
@@ -130,7 +136,7 @@ const Configurate = ({
                         <NameCar>{name}</NameCar>
                     </NameCarContainer>
                     <div>
-                        <ItemPrice>{colorPrice}</ItemPrice>
+                        <ItemPrice>Color Price: {colorPrice}</ItemPrice>
                         <ItemsConfig>
                             {
                                 colors.map(({ name, active }) => {
@@ -144,7 +150,7 @@ const Configurate = ({
                         </ItemsConfig>
                     </div>
                     <div>
-                        <ItemPrice>{wheelPrice}</ItemPrice>
+                        <ItemPrice>Wheel Price: {wheelPrice}</ItemPrice>
                         <ItemsConfig>
                             {
                                 wheels.map(({ name, image, active }) => {
@@ -159,6 +165,9 @@ const Configurate = ({
                     </div>
                     <PriceContainer>
                         <Price>Price: {total}</Price>
+                        <DefaultConfigurateContainer>
+                            <DefaultConfigurate onClick={handleDefaultConfigurate}>default configurate</DefaultConfigurate>
+                        </DefaultConfigurateContainer>
                     </PriceContainer>
                 </ChangeConfig>
             </Content>

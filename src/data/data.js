@@ -29,7 +29,7 @@ export const cars = [
             {
                 name: '#fff',
                 active: true,
-                price: 1000,
+                price: 0,
                 images: [
                     white911,
                     white911back,
@@ -76,7 +76,7 @@ export const cars = [
                 name: 'melbourne',
                 image: melbourne,
                 active: true,
-                price: 500
+                price: 0
             },
             {
                 name: 'konig',

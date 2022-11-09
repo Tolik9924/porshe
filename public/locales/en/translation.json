@@ -1,0 +1,10 @@
+{
+    "header": {
+        "models": "Models",
+        "availability": "Available cars",
+        "service": "Service and accessories",
+        "propositions": "Proposition",
+        "events": "Events",
+        "about": "About Porsche"
+    }
+}

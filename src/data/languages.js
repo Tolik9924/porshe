@@ -3,7 +3,7 @@ export const ukrainian  = {
         models: 'Моделі',
         availability: 'Автомобілі в наявності',
         service: 'Сервіс і аксесуари',
-        proposition: 'Пропозиції',
+        propositions: 'Пропозиції',
         events: 'Події',
         about: 'Про Порше',
     }
