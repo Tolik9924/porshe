@@ -15,22 +15,16 @@ const Car = () => {
 
     const configureData = JSON.parse(JSON.stringify(cars));
 
-    const result = configureData.filter((item) => {
-        return item.id === Number(id);
-    });
-
-    const resultFind = configureData.find((item) => item.id === Number(id));
-
-    console.log(resultFind);
+    const result = configureData.find((item) => item.id === Number(id));
 
     return (
         <div>
             <Configurate
-                colors={result[0].colors}
-                name={result[0].name}
-                energy={result[0].energy}
-                price={result[0].price}
-                wheels={result[0].wheels}
+                colors={result.colors}
+                name={result.name}
+                energy={result.energy}
+                price={result.price}
+                wheels={result.wheels}
             />
         </div>
     );
