@@ -1,5 +1,7 @@
 import React from 'react';
+import { useTranslation, withTranslation, Trans } from "react-i18next";
 
+// styles
 import {
     Common,
     Content,
@@ -10,21 +12,24 @@ import {
 } from './styled';
 
 const Footer = () => {
+
+    const { t, i18n } = useTranslation();
+
     return (
         <Container>
             <Common>
                 <Content>
-                    <Header>Контакти</Header>
-                    <Info>Tест-драйв</Info>
-                    <Info>Зворотній звязок</Info>
-                    <Info>Вакансії</Info>
-                    <Info>Сервісне партнерство з Porsche</Info>
+                    <Header>{t("footer.contacts")}</Header>
+                    <Info>{t("footer.test-drive")}</Info>
+                    <Info>{t("footer.feedback")}</Info>
+                    <Info>{t("footer.vacancies")}</Info>
+                    <Info>{t("footer.service-partner")}</Info>
                 </Content>
                 <Content>
-                    <Header>Світ Порше</Header>
-                    <Info>Корпоративні продажі BMW</Info>
-                    <Info>Diplomatic Sales</Info>
-                    <Info>Світ Порше</Info>
+                    <Header>{t("footer.service-partner")}</Header>
+                    <Info>{t("footer.world-porsche")}</Info>
+                    <Info>{t("footer.diplomatic-sales")}</Info>
+                    <Info>{t("footer.world-porsche")}</Info>
                     <Info>FAQ</Info>
                 </Content>
             </Common>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation, withTranslation, Trans } from "react-i18next";
 
 // components
 import Info from '../Info';
@@ -28,6 +29,8 @@ export const Main = () => {
 
     const navigate = useNavigate();
 
+    const { t, i18n } = useTranslation();
+
     const handleClick = (id) => {
         navigate(`/models/${id}`);
     }
@@ -36,12 +39,12 @@ export const Main = () => {
         <div>
             <InfoContainer>
                 <MoreInfoContainer>
-                    <MoreInfo>More Info</MoreInfo>
+                    <MoreInfo>{t("main.moreInfo")}</MoreInfo>
                 </MoreInfoContainer>
             </InfoContainer>
             <Info />
             <div>
-                <ModelHeader>Model Row</ModelHeader>
+                <ModelHeader>{t("main.modelRow")}</ModelHeader>
                 <Models>
                     {
                         cars.map((car) => {
@@ -50,10 +53,10 @@ export const Main = () => {
                                     <ModelContaier>
                                         <InfoCar>
                                             <NameModel>{car.name}</NameModel>
-                                            <Price>Орієнтована вартість від {car.price}</Price>
+                                            <Price>{t("main.orientedPrice")} {car.price}</Price>
                                         </InfoCar>
                                         <ConfigContainer>
-                                            <Config onClick={() => handleClick(car.id)}>config</Config>
+                                            <Config onClick={() => handleClick(car.id)}>{t("main.config")}</Config>
                                         </ConfigContainer>
                                     </ModelContaier>
                                 </Model>

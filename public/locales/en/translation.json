@@ -6,5 +6,32 @@
         "propositions": "Proposition",
         "events": "Events",
         "about": "About Porsche"
+    },
+    "main": {
+        "moreInfo": "More Info",
+        "modelRow": "Model Row",
+        "orientedPrice": "Estimated cost from",
+        "config": "config"
+    },
+    "info": {
+        "infoHeader": "A car that is timeless",
+        "infoMain": "The new 911 has absorbed the features of all its predecessors: it reminds of the past and gives a vision of the future. Silhouette: iconic. Design: a timeless classic. Technology: always one step ahead, but impossible without sports victories of the past. We are moving into the future with the eighth generation 911."
+    },
+    "footer": {
+        "contacts": "Contacts",
+        "test-drive": "Test-drive",
+        "feedback": "Feedback", 
+        "vacancies": "Vacancies",
+        "service-partner": "Service partnership with Porsche",
+        "world-porsche": "The world of Porsche",
+        "corporates-sales": "Porsche corporate sales",
+        "diplomatic-sales": "Diplomatic Sales"
+    },
+    "car": {
+        "configurate": "Configurate",
+        "color-price": "Color Price",
+        "wheel-price": "Wheel Price",
+        "price": "Price",
+        "default-configurate": "default configurate"
     }
 }

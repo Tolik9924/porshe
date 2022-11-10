@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation, withTranslation, Trans } from "react-i18next";
 
 // styles
 import {
@@ -12,17 +13,17 @@ import {
 } from './styled';
 
 const Info = () => {
+
+    const { t, i18n } = useTranslation();
+
     return (
         <Container>
             <InfoContainer>
                 <ImageContainer></ImageContainer>
                 <Wrap>
-                    <Header>Автомобіль, непідвладний часу</Header>
+                    <Header>{t("info.infoHeader")}</Header>
                     <DescriptionContainer>
-                        <Description>Новий 911 увібрав риси всіх своїх попередників: він нагадує про минуле та дає уявлення про майбутнє. Силует: культовий.
-                            Дизайн: класика, що не старіє. Технології: завжди на крок попереду, але неможливі без спортивних перемог минулого.
-                            Ми рухаємось у  майбутнє на 911 восьмого покоління.
-                        </Description>
+                        <Description>{t("info.infoMain")}</Description>
                     </DescriptionContainer>
                 </Wrap>
             </InfoContainer>

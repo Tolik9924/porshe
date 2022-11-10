@@ -5,9 +5,6 @@ import Configurate from './Configurate';
 import { useParams } from 'react-router-dom';
 import { cars } from '../../data/data';
 
-// assets
-import form from '../../assets/images/form.webp';
-
 // styles
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'

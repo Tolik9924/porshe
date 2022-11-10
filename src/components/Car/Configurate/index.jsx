@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
+import { useTranslation, withTranslation, Trans } from "react-i18next";
 
 // components
 import Checkbox from '../../common/Checkbox';
@@ -64,6 +65,8 @@ const Configurate = ({
     const [colorCar, setColorCar] = useState([]);
 
     const total = price + colorPrice + wheelPrice;
+
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         setColorCar(defaultColorCar);
@@ -130,13 +133,13 @@ const Configurate = ({
                 </SliderContainer>
                 <ChangeConfig>
                     <ConfigHeader>
-                        configurate
+                        {t("car.configurate")}
                     </ConfigHeader>
                     <NameCarContainer>
                         <NameCar>{name}</NameCar>
                     </NameCarContainer>
                     <div>
-                        <ItemPrice>Color Price: {colorPrice}</ItemPrice>
+                        <ItemPrice>{t("car.color-price")}: {colorPrice}</ItemPrice>
                         <ItemsConfig>
                             {
                                 colors.map(({ name, active }) => {
@@ -150,7 +153,7 @@ const Configurate = ({
                         </ItemsConfig>
                     </div>
                     <div>
-                        <ItemPrice>Wheel Price: {wheelPrice}</ItemPrice>
+                        <ItemPrice>{t("car.wheel-price")}: {wheelPrice}</ItemPrice>
                         <ItemsConfig>
                             {
                                 wheels.map(({ name, image, active }) => {
@@ -164,9 +167,9 @@ const Configurate = ({
                         </ItemsConfig>
                     </div>
                     <PriceContainer>
-                        <Price>Price: {total}</Price>
+                        <Price>{t("car.price")}: {total}</Price>
                         <DefaultConfigurateContainer>
-                            <DefaultConfigurate onClick={handleDefaultConfigurate}>default configurate</DefaultConfigurate>
+                            <DefaultConfigurate onClick={handleDefaultConfigurate}>{t("car.default-configurate")}</DefaultConfigurate>
                         </DefaultConfigurateContainer>
                     </PriceContainer>
                 </ChangeConfig>
