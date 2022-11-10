@@ -14,7 +14,7 @@ i18n
     interpolation: {
       escapeValue: false
     },
-    languages: ['en','ukr'],
+    locales: ['en','ukr'],
   });
 
 export default i18n;

@@ -41,23 +41,28 @@ export const Wrap = styled.div`
 
 export const ImageContainer = styled.div`
     width: 1000px;
-    min-height: 500px;
+    height: 500px;
     background-image: url(${carHeader});
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 10px 0 0 10px;
     @media (max-width: 1500px) {
         width: 100%;
-        height: 10%;
         border-radius: 0px;
         background-size: cover;
         display: flex;
         justify-content: center;
     }
+    @media (max-width: 600px) {
+        background-size: cover;
+        height: 200px;
+        display: flex;
+        align-content: center;
+    }
 `;
 
 export const Header = styled.header`
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 600;
     color: #1a1a1a;
     margin-top: 50px;
@@ -75,6 +80,6 @@ export const DescriptionContainer = styled.div`
 export const Description = styled.div`
     margin-top: 30px;
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 20px;
     color: #62666a;
 `;

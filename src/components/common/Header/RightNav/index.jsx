@@ -23,10 +23,9 @@ const RightNav = ({
         i18n.changeLanguage(value.value);
     };
 
-    const options = [
-        { value: 'en', label: 'en' },
-        { value: 'ukr', label: 'ukr' },
-    ];
+    const options = i18n.options.locales.map((locale) => {
+        return {value: locale, label: locale};
+    });
 
     const customStyles = {
         control: styles => ({ 

@@ -30,9 +30,6 @@ export const Header = styled.header`
     margin-top: 15px;
     margin-bottom: 15px;
     color: #191a1a;
-    @media (max-width: 1000px) {
-        font-size: 40px;
-    }
 `;
 
 export const Info = styled.span`
@@ -40,6 +37,6 @@ export const Info = styled.span`
     margin-bottom: 5px;
     color: #4b4d4e;
     @media (max-width: 1000px) {
-        font-size: 15px;
+        font-size: 10px;
     }
 `;

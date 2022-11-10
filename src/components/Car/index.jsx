@@ -19,6 +19,10 @@ const Car = () => {
         return item.id === Number(id);
     });
 
+    const resultFind = configureData.find((item) => item.id === Number(id));
+
+    console.log(resultFind);
+
     return (
         <div>
             <Configurate
