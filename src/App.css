@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./assets/fonts/PorscheNext-Regular.otf) format('otf');
+}
+
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "MyFont";
 }
 
 html, body {

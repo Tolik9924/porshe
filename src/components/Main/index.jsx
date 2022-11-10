@@ -23,7 +23,10 @@ import {
     Price,
     ConfigContainer,
     Config,
+    TextConfig,
+    InnerTextConfig,
 } from './styled';
+import ArrowRight from '../../assets/icons/ArrowRight';
 
 export const Main = () => {
 
@@ -56,7 +59,14 @@ export const Main = () => {
                                             <Price>{t("main.orientedPrice")} {car.price}</Price>
                                         </InfoCar>
                                         <ConfigContainer>
-                                            <Config onClick={() => handleClick(car.id)}>{t("main.config")}</Config>
+                                            <Config onClick={() => handleClick(car.id)}>
+                                                <TextConfig>
+                                                    <ArrowRight width='10px' height='10px' />
+                                                    <InnerTextConfig>
+                                                        <span>{t("main.config")}</span>
+                                                    </InnerTextConfig>
+                                                </TextConfig>
+                                            </Config>
                                         </ConfigContainer>
                                     </ModelContaier>
                                 </Model>

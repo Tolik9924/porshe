@@ -34,6 +34,14 @@ const RightNav = ({
             border: 'none',
             boxShadow: 'none',
         }),
+        option: (provided, state) => ({
+            ...provided,
+            borderBottom: 'none',
+            color: state.isSelected ? '#fff' : '#000',
+            backgroundColor: state.isSelected ? '#000' : '#fff',
+            marginTop: '-4px',
+            marginBottom: '-4px',
+          }),
     };
 
     return (

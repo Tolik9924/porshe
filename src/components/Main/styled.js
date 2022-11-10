@@ -96,13 +96,17 @@ export const InfoCar = styled.div`
 `;
 
 export const NameModel = styled.p`
-    font-size: 38px;
-    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: normal;
+    margin-bottom: 12px;
 `;
 
-export const Price = styled.p`
-    font-size: 30px;
-    font-weight: 600;
+export const Price = styled.span`
+    opacity: 1 !important;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
 `;
 
 export const ConfigContainer = styled.div`
@@ -116,11 +120,25 @@ export const Config = styled.button`
     background: #fff;
     cursor: pointer;
     border: none;
-    font-size: 23px;
+    font-size: 20px;
     transition: all .2s ease-out;
     &:hover {
         background: red;
         color: #fff;
         transition: all .2s ease-out;
     }
+`;
+
+export const TextConfig = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const InnerTextConfig = styled.div`
+    margin-left: 15px;
+    display: flex;
+    align-content: center;
+    padding-bottom: 3px;
 `;
